@@ -24,7 +24,7 @@ const NavResp = () => {
         <ul className={status?"flex flex-col space-grotesk content-center items-center   justify-center m-auto w-full":"hidden"}>
         { navItems?.slice(0,4).map((items,key)=>{
         
-        return  <Link href={items.location} key={key}> <li className="flex flex-col content-center m-auto my-5  font-medium">
+        return  <Link href={items.location} key={key}> <li className="flex flex-col content-center m-auto my-5 hover:font-bold font-medium">
             {items.name}
           </li></Link>
            })}

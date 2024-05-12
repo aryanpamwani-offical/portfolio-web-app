@@ -22,7 +22,7 @@ const NavPc = () => {
        
        { navItems?.slice(0,4).map((items,key)=>{
         
-         return <Link href={items.location} key={key} className='flex'> <li className="mt-2 mr-5  font-medium">
+         return <Link href={items.location} key={key} className='flex'> <li className="mt-2 mr-5 hover:font-bold font-medium">
           {items.name}
         </li></Link>
          })}
