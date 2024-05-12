@@ -30,15 +30,15 @@ const Project = () => {
           <CarouselItem >
           
               <ProjectItems
-              WebImgUrl={'/projectOne.png'}
+              WebImgUrl={'https://i.ibb.co/txLvGMG/project-One.png'}
               WebName={"Portfolio Website"}
-              WebGit={"/"}
+              WebGit={"https://github.com/aryanpamwani-offical/portfolio-web-app"}
               WebUrl={"/"}
               />
           </CarouselItem>
           <CarouselItem >
           <ProjectItems
-              WebImgUrl={'/projectTwo.png'}
+              WebImgUrl={'https://i.ibb.co/pj2PVRC/project-Two.png'}
               WebName={"Ecomerce Website"}
               WebGit={"https://github.com/aryanpamwani-offical/ecomerce-web-app-client"}
               WebUrl={"https://ecomerce-web-app-client.vercel.app/"}
@@ -47,7 +47,7 @@ const Project = () => {
           </CarouselItem>
           <CarouselItem >
           <ProjectItems
-              WebImgUrl={'/projectThree.png'}
+              WebImgUrl={'https://i.ibb.co/6y9NpkQ/project-Three.png'}
               WebName={"Chat App Website"}
               WebGit={"https://github.com/aryanpamwani-offical/Pamwani-Chat-App-Client-Side"}
               WebUrl={"https://selfconnect-chat-web-app.vercel.app/"}

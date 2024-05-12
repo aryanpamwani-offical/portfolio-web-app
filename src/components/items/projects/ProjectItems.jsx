@@ -9,7 +9,7 @@ const ProjectItems = ({WebName,WebImgUrl,WebGit,WebUrl}) => {
     <>
     <Card>
                 <CardContent className="flex flex-col aspect-square items-center justify-center p-6 w-full">
-                    <img src={WebImgUrl} className='w-11/12 rounded-3xl mt-7'></img>
+                    <Image src={WebImgUrl} width={500} height={500}className='w-11/12 rounded-3xl mt-7' alt="projects" ></Image>
                   <h3 className='text-2xl roboto font-bold uppercase my-5'>{WebName}</h3>
                   <div className="flex text-center justify-center mx-auto">
                     <div className='  mx-3'>
