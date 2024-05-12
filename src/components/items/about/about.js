@@ -24,11 +24,7 @@ const AboutComp = () => {
 </h3>
 <p>MERN Stack Developer: Proficient in building web applications using the MERN (MongoDB, Express.js, React, Node.js) stack. I enjoy working on both front-end and back-end development, bringing ideas to life through code.
 Let’s connect and collaborate on exciting projects! 🤝🎨🚀</p>
-<<<<<<< HEAD
 <div className='mt-2 mb-5 lg:m-0 m-auto'>
-=======
-<div className='mt-2 mb-5 lg:m-0 m-auto '>
->>>>>>> c4394fba8e6236861dbb3d273c21455572705b36
 
 <Link href={"/about"}><Button >Read More</Button></Link>
 </div>
