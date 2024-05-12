@@ -2,10 +2,11 @@
 import { Button } from '@/components/ui/button'
 import axios from 'axios';
 import React,{useState} from 'react'
-import { useToast } from "@/components/ui/use-toast"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
-  const { toast } = useToast()
+
   const [user, setUser] = useState({
     name:"",
     email:"",
@@ -20,19 +21,20 @@ setUser({...user,[e.target.name]:e.target.value})
 const handleForm=async(e)=>{
   e.preventDefault();
  await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/api/v1/contact/`,user).then(async(res)=>{
-    alert(
-    "Your message has been sent."
+    toast.success(
+    "Contact Form Saved Successfully"
   )
 //  console.log(res)
- }).catch((error)=>{
-  alert(
-  "Internal Error Occured."
+ }).catch(()=>{
+  toast(
+    "Internal Error Occured"
   )
 //  console.log(error)
  })
 }
   return (
     <>
+   
     <form  className='flex flex-col justify-center m-auto items-center border border-slate-400 w-4/5 rounded-lg shadow-md shadow-slate-500 '>
         <p className="font-semibold inter my-5">Name</p>
         <input 
@@ -81,9 +83,9 @@ const handleForm=async(e)=>{
            ></textarea>
        
         <Button size="lg" onClick={handleForm}className="w-4/5 mb-8">Submit</Button>
-
+        
     </form>
-    
+    <ToastContainer />
     
     </>
   )
