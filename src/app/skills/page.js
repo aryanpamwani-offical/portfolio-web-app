@@ -1,3 +1,4 @@
+import SeoComp from '@/components/items/SeoComponent/SeoComp'
 import HeadingComp from '@/components/items/heading/heading'
 import Skills from '@/components/items/skills/skills'
 import React from 'react'
