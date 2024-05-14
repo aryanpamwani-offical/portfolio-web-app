@@ -8,7 +8,7 @@ const AboutComp = () => {
 <main className="flex content-center items-center justify-center lg:w-1/2 md:w-full   ">
     <div className='lg:pl-6 lg:ml-30 w-3/4 justify-center m-auto items-center'>
 
-    <Image src={'https://i.ibb.co/XSJw7xT/main.jpg'} width={400} height={700} className='rounded-3xl m-auto' alt='about'/>
+    <Image src={'https://i.ibb.co/XSJw7xT/main.jpg'} width={400} height={700} loading='lazy' className='rounded-3xl m-auto' alt='about'/>
     </div>
 </main>
 

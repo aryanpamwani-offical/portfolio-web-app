@@ -1,4 +1,5 @@
 import HeroSection from "@/components/items/HeroSection/HeroSection";
+import SeoComp from "@/components/items/SeoComponent/SeoComp";
 import AboutComp from "@/components/items/about/about";
 import Contact from "@/components/items/contact/contact";
 
@@ -9,7 +10,11 @@ import Skills from "@/components/items/skills/skills";
 export default function Home() {
   return (
   <>
+  <SeoComp
+  title={"Home | Aryan Pamwani"}
+
   
+  />
 <HeroSection/>
 
 

@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/items/navbar/Nav";
 import Footer from "@/components/items/footer/footer";
 import { AnimatePresence, motion } from "framer-motion";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 

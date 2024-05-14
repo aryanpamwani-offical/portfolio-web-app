@@ -5,6 +5,11 @@ import React from 'react'
 const page = () => {
   return (
     <>
+     <SeoComp
+  title={"Home | Skills"}
+
+  
+  />
     <HeadingComp
  heading={"Skills"}
  subheading={"My Skills"}

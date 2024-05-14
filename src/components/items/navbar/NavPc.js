@@ -15,7 +15,7 @@ const NavPc = () => {
   <>
   <div className="lg:flex md:flex sm:hidden hidden flex-row flex-wrap bg-white w-full h-24 shadow-md shadow-gray-400 fixed content-center z-50">
     <div className="flex content-center justify-start w-1/3 p-5 ">
-        <Image src="https://i.ibb.co/RGF1mW7/navlogo.png" width={90} height={90} className='  pl-6 ml-5' alt='logo'/> 
+        <Image src="https://i.ibb.co/RGF1mW7/navlogo.png" width={90} height={90} loading='lazy' className='  pl-6 ml-5' alt='logo'/> 
     </div>
     <div className="flex lg:flex md:flex sm:flex  content-center justify-end w-2/3 my-auto " >
         <ul className="flex flex-row space-grotesk content-center mr-5 pr-14">

@@ -94,3 +94,9 @@
 .nav-resp-height{
   height: 90px;
 }
+.nav-animate-open {
+  transition: 1000ms;
+}
+.nav-animate-ul{
+  transition: 1000ms;
+}
