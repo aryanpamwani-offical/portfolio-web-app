@@ -14,9 +14,14 @@ const page = () => {
   <HeadingComp
  heading={"About"}
  subheading={"My Introduction"}
+ animation={"fade-up"}
 
  />
-    <AboutComp/>
+    <AboutComp
+    animationRight={"fade-right"}
+    animationLeft={"fade-left"}
+  
+    />
     </>
   )
 }

@@ -14,6 +14,7 @@ const page = () => {
     <HeadingComp
  heading={"Projects"}
  subheading={"My Projects"}
+ animation={"fade-up"}
  />
     <Project/>
     </>

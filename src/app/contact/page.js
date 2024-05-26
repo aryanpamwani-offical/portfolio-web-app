@@ -13,8 +13,11 @@ const page = () => {
     <HeadingComp
  heading={"Get In Touch"}
  subheading={"Contact Us"}
+ animation={"fade-up"}
  />
- <Contact/>
+ <Contact
+  animation={"fade-up"}
+  />
     </>
   )
 }

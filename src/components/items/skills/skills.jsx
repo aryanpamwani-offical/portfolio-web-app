@@ -2,10 +2,10 @@
 import React from 'react'
 import SkillItem from '../skillitems/SkillItem'
 
-const Skills = () => {
+const Skills = ({animation}) => {
   return (
     
-    <section className='lg:mx-20 md:mx-15 sm:mx-0'>
+    <section className='lg:mx-20 md:mx-15 sm:mx-0' data-aos={animation}>
     <div className='flex flex-col w-full mb-5 mt-10 lg:p-12 md:p-6 sm:p-3 p-0 '>
        
         <div className="flex flex-row my-1  justify-between ">

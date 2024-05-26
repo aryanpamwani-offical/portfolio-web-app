@@ -5,7 +5,7 @@ import React,{useState} from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Contact = () => {
+const Contact = ({animation}) => {
 
   const [user, setUser] = useState({
     name:"",
@@ -35,7 +35,7 @@ const handleForm=async(e)=>{
   return (
     <>
    
-    <form  className='flex flex-col justify-center m-auto items-center border border-slate-400 w-4/5 rounded-lg shadow-md shadow-slate-500 '>
+    <form  className='flex flex-col justify-center m-auto items-center border border-slate-400 w-4/5 rounded-lg shadow-md shadow-slate-500 ' data-aos={animation}>
         <p className="font-semibold inter my-5">Name</p>
         <input 
         type="text"   

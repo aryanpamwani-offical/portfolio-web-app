@@ -2,17 +2,17 @@ import Image from 'next/image'
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-const AboutComp = () => {
+const AboutComp = ({animationRight,animationLeft}) => {
   return (
     <section className='flex lg:w-full lg:flex-row md:flex-col sm:flex-col flex-col  Lg:content-center mb-12 '>
-<main className="flex content-center items-center justify-center lg:w-1/2 md:w-full   ">
+<main className="flex content-center items-center justify-center lg:w-1/2 md:w-full   " data-aos={animationRight}>
     <div className='lg:pl-6 lg:ml-30 w-3/4 justify-center m-auto items-center'>
 
     <Image src={'https://i.ibb.co/XSJw7xT/main.jpg'} width={400} height={700} loading='lazy' className='rounded-3xl m-auto' alt='about'/>
     </div>
 </main>
 
-<div className="flex flex-col content-center m-auto lg:w-1/2 md:w-full lg:justify-end w-full p-5 pr-6 mr-20 lg:text-xl md:text-xl sm:text-2xl texl-xl">
+<div className="flex flex-col content-center m-auto lg:w-1/2 md:w-full lg:justify-end w-full p-5 pr-6 mr-20 lg:text-xl md:text-xl sm:text-2xl texl-xl"  data-aos={animationLeft}>
    
    <p>
 

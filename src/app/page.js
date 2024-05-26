@@ -22,26 +22,41 @@ export default function Home() {
  heading={"About"}
  subheading={"My Introduction"}
  margin={"my-20"}
+ animation={"fade-up"}
  />
- <AboutComp/>
+ <AboutComp
+ animationRight={"fade-right"}
+ animationLeft={"fade-left"}
+
+ />
  <HeadingComp
  heading={"Skills"}
  subheading={"My Skills"}
  margin={"my-20"}
+ animation={"fade-up"}
+
  />
- <Skills/>
+ <Skills
+  animation={"zoom-in-up"}
+ />
  <HeadingComp
  heading={"Projects"}
  subheading={"My Projects"}
  margin={"my-20"}
+ animation={"fade-up"}
  />
- <Project/>
+ <Project
+ 
+ />
  <HeadingComp
  heading={"Get In Touch"}
  subheading={"Contact Us"}
  margin={"my-20"}
+ animation={"fade-up"}
  />
- <Contact/>
+ <Contact
+  animation={"fade-up"}
+ />
  
  
   </>

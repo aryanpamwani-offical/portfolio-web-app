@@ -3,9 +3,11 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/items/navbar/Nav";
 import Footer from "@/components/items/footer/footer";
-import { AnimatePresence, motion } from "framer-motion";
+import React,{useEffect} from 'react'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -16,6 +18,12 @@ const inter = Inter({ subsets: ["latin"] });
 // };
 
 export default function RootLayout({ children }) {
+  useEffect(() => {
+    AOS.init({
+         duration: 800,
+         
+       })
+ }, [])
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -25,22 +33,15 @@ export default function RootLayout({ children }) {
 
         <Navbar/>
         <div className="relative top-36 overflow-hidden">
-        <AnimatePresence>
-        
-<motion.div
-initial={{opacity:0,y:15}}
-animate={{opacity:1,y:0}}
-exit={{opacity:0,y:15}}
-transition={{delay:0.25}}
->
+       
 
         {children}
         <ToastContainer />
-</motion.div>
+
         
         <Footer/>
 
-  </AnimatePresence>
+
         </div>
         </body>
     </html>

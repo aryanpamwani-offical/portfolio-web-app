@@ -15,7 +15,9 @@ const page = () => {
  heading={"Skills"}
  subheading={"My Skills"}
  />
-    <Skills/>
+    <Skills
+    animation={"zoom-in-up"}
+    />
     </>
   )
 }
