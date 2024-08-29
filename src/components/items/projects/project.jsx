@@ -30,7 +30,7 @@ const Project = () => {
           <CarouselItem >
           
               <ProjectItems
-              WebImgUrl={'https://i.ibb.co/txLvGMG/project-One.png'}
+              WebImgUrl={'https://res.cloudinary.com/dttek3gqg/image/upload/v1724922550/project-One_tghpsw.png'}
               WebName={"Portfolio Website"}
               WebGit={"https://github.com/aryanpamwani-offical/portfolio-web-app"}
               WebUrl={"/"}
@@ -38,7 +38,7 @@ const Project = () => {
           </CarouselItem>
           <CarouselItem >
           <ProjectItems
-              WebImgUrl={'https://i.ibb.co/pj2PVRC/project-Two.png'}
+              WebImgUrl={'https://res.cloudinary.com/dttek3gqg/image/upload/v1724922569/project-Two_subflq.png'}
               WebName={"Ecomerce Website"}
               WebGit={"https://github.com/aryanpamwani-offical/ecomerce-web-app-client"}
               WebUrl={"https://ecomerce-web-app-client.vercel.app/"}
@@ -47,7 +47,7 @@ const Project = () => {
           </CarouselItem>
           <CarouselItem >
           <ProjectItems
-              WebImgUrl={'https://i.ibb.co/6y9NpkQ/project-Three.png'}
+              WebImgUrl={'https://res.cloudinary.com/dttek3gqg/image/upload/v1724922597/project-Three_omjebq.png'}
               WebName={"Chat App Website"}
               WebGit={"https://github.com/aryanpamwani-offical/Pamwani-Chat-App-Client-Side"}
               WebUrl={"https://selfconnect-chat-web-app.vercel.app/"}

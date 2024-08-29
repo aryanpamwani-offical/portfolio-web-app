@@ -13,11 +13,11 @@ const NavResp = () => {
   <>
   <div className={status?"duration-1000 transition nav-animate-open ease-in-out lg:hidden md:flex sm:flex flex flex-row flex-wrap bg-white w-full h-screen shadow-md shadow-gray-400 fixed  z-50":"transition ease-in-out duration-1000 lg:hidden md:flex sm:flex flex flex-row flex-wrap bg-white w-full h-24 shadow-md shadow-gray-400 fixed  z-50 nav-animate-open"}>
     <div className="flex  justify-start w-1/3 m-auto h-15 p-5 content-start h-24">
-        <Image src="https://i.ibb.co/RGF1mW7/navlogo.png"  width={80} height={80} className='w-20   pl-6 ml-5' alt='logo'loading='lazy'/> 
+        <Image src="https://res.cloudinary.com/dttek3gqg/image/upload/v1724921045/navlogo_a1hivv.webp"  width={80} height={80} className='w-20   pl-6 ml-10' alt='logo'loading='lazy'/> 
     </div>
     <div className="flex  justify-end w-2/3   p-5 content-end" onClick={()=>setStatus(!status)}>
 
-        <Image src={"https://i.ibb.co/GF7M6bJ/menu.png"} width={56} height={56} className='w-14   my-auto pl-6 ml-5' priority={true} alt='menu'/> 
+        <Image src={"https://res.cloudinary.com/dttek3gqg/image/upload/v1724922497/menu_crwwxl.png"} width={56} height={56} className='w-14   my-auto pl-6 ml-5' priority={true} alt='menu'/> 
     </div>
     
     
@@ -43,3 +43,4 @@ return   <Link href={items.location} key={key} className="flex flex-col content-
 }
 
 export default NavResp
+
