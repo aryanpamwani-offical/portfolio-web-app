@@ -30,6 +30,7 @@ const Skills = ({animation}) => {
             <SkillItem 
             imgUrl={"https://res.cloudinary.com/dttek3gqg/image/upload/v1724922736/next-js-seeklogo_trs43v.png"}
             lanuageName={"Next Js"}
+            cssAdd={"icon-dark"}
             />
             <SkillItem 
             imgUrl={"https://res.cloudinary.com/dttek3gqg/image/upload/v1724922781/reactjs-logo-icon_q06uez.png"}

@@ -1,8 +1,12 @@
+"use client";
 import Image from 'next/image'
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
+import { useSelector } from 'react-redux'
+
 const AboutComp = ({animationRight,animationLeft}) => {
+  const lightTheme=useSelector((state)=>state.themeKey);
   return (
     <section className='flex lg:w-full lg:flex-row md:flex-col sm:flex-col flex-col  Lg:content-center mb-12 '>
 <main className="flex content-center items-center justify-center lg:w-1/2 md:w-full   " data-aos={animationRight}>
@@ -26,7 +30,7 @@ const AboutComp = ({animationRight,animationLeft}) => {
 Let’s connect and collaborate on exciting projects! 🤝🎨🚀</p>
 <div className='mt-2 mb-5 lg:m-0 lg:mt-4 md:mt-4 m-auto w-full lg:w-44'>
 
-<Link href={"/about"}><Button size="lg" className=" md:w-full sm:w-full w-full">Read More</Button></Link>
+<Link href={"/about"}><Button size="lg" className=" md:w-full sm:w-full w-full" variant={lightTheme?'default':'dark'}>Read More</Button></Link>
 </div>
 </div>
 

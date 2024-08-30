@@ -5,19 +5,21 @@ import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { navItems } from './NavData'
 import Image from 'next/image'
+import { useSelector } from 'react-redux'
 
 
 const NavResp = () => {
-  const [status,setStatus]=useState(false)
+  const [status,setStatus]=useState(false);
+  const lightTheme=useSelector((state)=>state.themeKey);
   return (
   <>
-  <div className={status?"duration-1000 transition nav-animate-open ease-in-out lg:hidden md:flex sm:flex flex flex-row flex-wrap bg-white w-full h-screen shadow-md shadow-gray-400 fixed  z-50":"transition ease-in-out duration-1000 lg:hidden md:flex sm:flex flex flex-row flex-wrap bg-white w-full h-24 shadow-md shadow-gray-400 fixed  z-50 nav-animate-open"}>
+  <div className={status?"duration-1000 transition nav-animate-open ease-in-out lg:hidden md:flex sm:flex flex flex-row flex-wrap bg-inherit w-full h-screen shadow-md shadow-zinc-400 fixed  z-50":"transition ease-in-out duration-1000 lg:hidden md:flex sm:flex flex flex-row flex-wrap bg-inherit w-full h-24 shadow-md shadow-gray-400 fixed  z-50 nav-animate-open"}>
     <div className="flex  justify-start w-1/3 m-auto h-15 p-5 content-start h-24">
         <Image src="https://res.cloudinary.com/dttek3gqg/image/upload/v1724921045/navlogo_a1hivv.webp"  width={80} height={80} className='w-20   pl-6 ml-10' alt='logo'loading='lazy'/> 
     </div>
     <div className="flex  justify-end w-2/3   p-5 content-end" onClick={()=>setStatus(!status)}>
 
-        <Image src={"https://res.cloudinary.com/dttek3gqg/image/upload/v1724922497/menu_crwwxl.png"} width={56} height={56} className='w-14   my-auto pl-6 ml-5' priority={true} alt='menu'/> 
+        <Image src={"https://res.cloudinary.com/dttek3gqg/image/upload/v1724922497/menu_crwwxl.png"} width={56} height={56} className={lightTheme?'w-14   my-auto pl-6 ml-5':'w-14   my-auto pl-6 ml-5 icon-dark'} priority={true} alt='menu'/> 
     </div>
     
     

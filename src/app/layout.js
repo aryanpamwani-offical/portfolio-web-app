@@ -1,5 +1,4 @@
 "use client"
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/items/navbar/Nav";
 import Footer from "@/components/items/footer/footer";
@@ -8,9 +7,12 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import  {store}  from '../Features/store';
+import {Provider, useSelector} from 'react-redux';
+import ThemeChooser from "@/components/items/theme/theme";
+import ThemeMaker from "@/components/items/theme/ThemeMaker";
 
 
-const inter = Inter({ subsets: ["latin"] });
 
 // export const metadata = {
 //   title: "Create Next App",
@@ -18,19 +20,23 @@ const inter = Inter({ subsets: ["latin"] });
 // };
 
 export default function RootLayout({ children }) {
+  
   useEffect(() => {
     AOS.init({
-         duration: 800,
-         
-       })
- }, [])
+      duration: 800,
+      
+    })
+  }, [])
+ 
+ 
   return (
+      <Provider store={store}>
     <html lang="en">
-      <body className={inter.className}>
+      <body className="">
+<ThemeMaker>
 
 
        
-
         <Navbar/>
         <div className="relative top-36 overflow-hidden">
        
@@ -39,11 +45,14 @@ export default function RootLayout({ children }) {
         <ToastContainer />
 
         
+        <ThemeChooser />
         <Footer/>
 
 
         </div>
+        </ThemeMaker>
         </body>
     </html>
+        </Provider>
   );
 }

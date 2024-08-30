@@ -2,11 +2,12 @@
 import { Button } from '@/components/ui/button'
 import axios from 'axios';
 import React,{useState} from 'react'
+import { useSelector } from 'react-redux';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = ({animation}) => {
-
+  const lightTheme=useSelector((state)=>state.themeKey);
   const [user, setUser] = useState({
     name:"",
     email:"",
@@ -39,17 +40,13 @@ const handleForm=async(e)=>{
         <p className="font-semibold inter my-5">Name</p>
         <input 
         type="text"   
-        className="rounded-lg border-slate-950
-         border w-4/5 outline-none px-5 text-center
-         capitalize" name="name" placeholder='Enter Your Name' 
+        className={lightTheme?"input-fields":"input-fields-dark"} name="name" placeholder='Enter Your Name' 
           value={user.name}
           onChange={handleChange}
           />
         <p className="font-semibold inter my-5">Email</p>
         <input type="email"
-          className="rounded-lg border-slate-950 border w-4/5 
-          outline-none px-5
-           text-center capitalize"
+          className={lightTheme?"input-fields":"input-fields-dark"}
             name="email"
              placeholder='Enter Your Email'
              value={user.email}
@@ -60,8 +57,7 @@ const handleForm=async(e)=>{
 
         <p className="font-semibold inter my-5">Subject</p>
         <input type="text"
-          className="rounded-lg border-slate-950 w-4/5  border outline-none
-           px-5 text-center capitalize"
+          className={lightTheme?"input-fields":"input-fields-dark"}
             name="subject" 
             placeholder='Enter Your Subject' 
             value={user.subject}
@@ -71,10 +67,7 @@ const handleForm=async(e)=>{
            />
 
         <p className="font-semibold inter my-5 capitalize">How may I help you? </p>
-        <textarea className="rounded-lg border-slate-950 
-        w-4/5 h-40 border outline-none px-5 py-4 mb-8
-         text-center capitalize"
-          name="detail"
+        <textarea className={lightTheme?"input-textarea":"input-textarea-dark"} name="detail"
            placeholder='Exter your project in detail'
            value={user.detail}
            onChange={handleChange}
@@ -82,7 +75,7 @@ const handleForm=async(e)=>{
            required
            ></textarea>
        
-        <Button size="lg" onClick={handleForm}className="w-4/5 mb-8">Submit</Button>
+        <Button size="lg" onClick={handleForm}className="w-4/5 mb-8" variant={lightTheme?'default':'dark'}>Submit</Button>
         
     </form>
     <ToastContainer />

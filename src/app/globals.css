@@ -100,3 +100,28 @@
 .nav-animate-ul{
   transition: 1000ms;
 }
+.icon-dark{
+filter: grayscale(1) invert(1);
+}
+.input-fields{
+  @apply rounded-lg border-slate-950 border
+  w-4/5 outline-none px-5 text-center  capitalize
+  mb-5
+}
+.input-textarea{
+  @apply rounded-lg border-slate-950 
+  w-4/5 h-40 border outline-none px-5 py-4 mb-8
+   text-center capitalize
+}
+.input-textarea-dark{
+  @apply rounded-lg border-white  bg-transparent
+  w-4/5 h-40 border outline-none px-5 py-4 mb-8
+   text-center capitalize
+}
+
+.input-fields-dark{
+  @apply rounded-lg border-white border bg-transparent w-4/5 outline-none px-5 text-center  capitalize
+}
+.arrow-btn{
+  @apply bg-slate-500 hover:bg-slate-800
+}

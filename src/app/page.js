@@ -1,3 +1,5 @@
+"use client";
+
 import HeroSection from "@/components/items/HeroSection/HeroSection";
 import SeoComp from "@/components/items/SeoComponent/SeoComp";
 import AboutComp from "@/components/items/about/about";
@@ -6,18 +8,23 @@ import Contact from "@/components/items/contact/contact";
 import HeadingComp from "@/components/items/heading/heading";
 import Project from "@/components/items/projects/project";
 import Skills from "@/components/items/skills/skills";
-import Head from "next/head";
+
+
+import { useSelector } from "react-redux";
 
 
 
 export default function Home() {
+
+  const lightTheme=useSelector((state)=>state.themeKey);
   return (
-  <>
+  <div className={lightTheme?"bg-white text-black relative":"bg-black text-white relative"}>
   <SeoComp
   title={"Home | Aryan Pamwani"}
 
   
   />
+ 
 <HeroSection/>
 
 
@@ -61,6 +68,6 @@ export default function Home() {
   animation={"fade-up"}
  />
 
-  </>
+  </div>
   );
 }
