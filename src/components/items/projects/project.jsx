@@ -1,63 +1,54 @@
 'use client'
-import React from 'react'
-import Autoplay from "embla-carousel-autoplay"
-
-import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-  } from "@/components/ui/carousel"
+import React,{useState,useEffect} from 'react'
+import {  projectData} from "./projectData";
 import ProjectItems from './ProjectItems'
 
 const Project = () => {
-    const plugin = React.useRef(
-        Autoplay({ delay: 2000, stopOnInteraction: true })
-      )
-  return (
-  <div className='flex justify-center m-auto  w-full mb-10  '>
+  const [current, setCurrent] = useState(0);
+ 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent(current === projectData.length - 1 ? 0 : current + 1);
+    }, 4000); 
 
-  
-    <Carousel
-      plugins={[plugin.current]}
-      className=" w-2/3"
-      onMouseEnter={plugin.current.stop}
-      onMouseLeave={plugin.current.reset}
-    >
- <CarouselContent>
-       
-          <CarouselItem >
-          
-              <ProjectItems
-              WebImgUrl={'https://res.cloudinary.com/dttek3gqg/image/upload/v1724922550/project-One_tghpsw.png'}
-              WebName={"Portfolio Website"}
-              WebGit={"https://github.com/aryanpamwani-offical/portfolio-web-app"}
-              WebUrl={"/"}
-              />
-          </CarouselItem>
-          <CarouselItem >
-          <ProjectItems
-              WebImgUrl={'https://res.cloudinary.com/dttek3gqg/image/upload/v1724922569/project-Two_subflq.png'}
-              WebName={"Ecomerce Website"}
-              WebGit={"https://github.com/aryanpamwani-offical/ecomerce-web-app-client"}
-              WebUrl={"https://ecomerce-web-app-client.vercel.app/"}
-              />
-              
-          </CarouselItem>
-          <CarouselItem >
-          <ProjectItems
-              WebImgUrl={'https://res.cloudinary.com/dttek3gqg/image/upload/v1724922597/project-Three_omjebq.png'}
-              WebName={"Chat App Website"}
-              WebGit={"https://github.com/aryanpamwani-offical/Pamwani-Chat-App-Client-Side"}
-              WebUrl={"https://selfconnect-chat-web-app.vercel.app/"}
-              />
-              
-          </CarouselItem>
-      </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
-</Carousel>
+    return () => clearInterval(interval); 
+  }, [current])
+    function nextSlide() {
+        setCurrent(current === projectData.length - 1 ? 0 : current + 1);
+    }
+   
+    function prevSlide() {
+        setCurrent(current === 0 ? projectData.length - 1 : current - 1);
+    }
+  return (
+    <div className="flex justify-evenly p-5 items-center h-screen">
+      <div className="left-arrow bg-gray-200 hover:bg-gray-400 hover:text-white p-2 rounded-lg cursor-pointer" onClick={prevSlide}>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                    </svg>
+                </div>
+  <div className='flex  justify-center items-center m-auto  w-full mb-10  '>
+  {projectData.map(
+                    (data, index) =>
+                        current === index && (
+<ProjectItems
+WebName={data.name}
+WebImgUrl={data.imgurl}
+WebGit={data.gitUrl}
+WebUrl={data.linkUrl}
+/>
+                          
+                          
+                        )
+                )}
+
+
+</div>
+<div className="right-arrow bg-gray-200 hover:bg-gray-400 hover:text-white p-2 rounded-lg cursor-pointer" onClick={nextSlide}>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>
+                </div>
 </div>
    
   )

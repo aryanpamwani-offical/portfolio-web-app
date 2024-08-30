@@ -6,6 +6,9 @@ import Contact from "@/components/items/contact/contact";
 import HeadingComp from "@/components/items/heading/heading";
 import Project from "@/components/items/projects/project";
 import Skills from "@/components/items/skills/skills";
+import Head from "next/head";
+
+
 
 export default function Home() {
   return (
@@ -57,8 +60,7 @@ export default function Home() {
  <Contact
   animation={"fade-up"}
  />
- 
- 
+
   </>
   );
 }
