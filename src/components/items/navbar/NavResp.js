@@ -33,7 +33,7 @@ const NavResp = () => {
         {navItems?.slice(4,5).map((items,key)=>{
 
 return   <Link href={items.location} key={key} className="flex flex-col content-center m-auto my-5" onClick={()=>setStatus(!status)}>
-<Button variant='default' >{items.name}</Button>
+<Button variant={lightTheme?'default':'dark'} >{items.name}</Button>
 </Link>
          })}
         </ul>
