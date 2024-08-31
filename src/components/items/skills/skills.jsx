@@ -12,7 +12,7 @@ const Skills = ({animation}) => {
         <div className="flex flex-row my-1  justify-between ">
           {skillData.slice(0,4).map((data,key)=>{
            return  <SkillItem
-           key={key(data.id)}
+           key={key}
              imgUrl={data.imgUrl}
              lanuageName={data.languageName}
              />
@@ -22,7 +22,7 @@ const Skills = ({animation}) => {
         <div className="flex flex-row my-1  justify-evenly ">
         {skillData.slice(4,5).map((data,key)=>{
            return  <SkillItem
-           key={key(data.id)}
+           key={key}
              imgUrl={data.imgUrl}
              lanuageName={data.languageName}
              cssAdd={"icon-dark"}
@@ -30,7 +30,7 @@ const Skills = ({animation}) => {
           })}
         {skillData.slice(5,8).map((data,key)=>{
            return  <SkillItem
-           key={key(data.id)}
+           key={key}
              imgUrl={data.imgUrl}
              lanuageName={data.languageName}
              />
@@ -39,7 +39,7 @@ const Skills = ({animation}) => {
         <div className="flex flex-row my-1  justify-between ">
         {skillData.slice(8,12).map((data,key)=>{
            return  <SkillItem
-           key={key(data.id)}
+           key={key}
              imgUrl={data.imgUrl}
              lanuageName={data.languageName}
              />
