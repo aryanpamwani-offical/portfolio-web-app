@@ -1,4 +1,4 @@
-const skills = [
+const skillData = [
   {
     id: 0,
     imgUrl: "https://res.cloudinary.com/dttek3gqg/image/upload/v1724922634/html5_ebxj4i.png",
