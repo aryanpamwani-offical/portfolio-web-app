@@ -11,7 +11,7 @@ const Footer = () => {
     <div
     className={lightTheme?'flex flex-col justify-center m-auto bg-inherit border border-t-2 text-inherit items-center  mt-20 shadow shadow-slate-600 w-full'
     :"flex flex-col justify-center m-auto bg-black  text-inherit items-center  mt-20 shadow-inner shadow-zinc-400 w-full"}>
-        <Image src={'https://res.cloudinary.com/dttek3gqg/image/upload/v1724921045/navlogo_a1hivv.webp'} width={220} height={220} alt='logo' loading='lazy'/>
+        <Image src={'https://res.cloudinary.com/dttek3gqg/image/upload/v1724921045/navlogo_a1hivv.webp'} width={220} height={220} alt='logo'  priority={true}/>
         <div className="flex flex-row jusify-between  my-5 ">
             <Link href={"https://github.com/aryanpamwani-offical"}>
             <Image src={'https://res.cloudinary.com/dttek3gqg/image/upload/v1724922910/github_daezwy.png'} 
