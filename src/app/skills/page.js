@@ -1,6 +1,6 @@
 import SeoComp from '@/components/items/SeoComponent/SeoComp'
-import HeadingComp from '@/components/items/heading/heading'
-import Skills from '@/components/items/skills/skills'
+import HeadingComp from '@/components/items/Heading/heading'
+import Skills from '@/components/items/Skills/skills'
 import React from 'react'
 export  const metadata = {
   title: "Skills | Aryan Pamwani",

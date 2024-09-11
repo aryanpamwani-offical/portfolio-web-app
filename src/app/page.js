@@ -2,12 +2,12 @@
 
 import HeroSection from "@/components/items/HeroSection/HeroSection";
 
-import AboutComp from "@/components/items/about/about";
-import Contact from "@/components/items/contact/contact";
+import AboutComp from "@/components/items/About/about";
+import Contact from "@/components/items/Contact/contact";
 
-import HeadingComp from "@/components/items/heading/heading";
+import HeadingComp from "@/components/items/Heading/heading";
 import Project from "@/components/items/projects/project";
-import Skills from "@/components/items/skills/skills";
+import Skills from "@/components/items/Skills/skills";
 import Head from "next/head";
 
 
