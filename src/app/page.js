@@ -1,13 +1,14 @@
 // "use client";
 
 import HeroSection from "@/components/items/HeroSection/HeroSection";
-import SeoComp from "@/components/items/SeoComponent/SeoComp";
+
 import AboutComp from "@/components/items/about/about";
 import Contact from "@/components/items/contact/contact";
 
 import HeadingComp from "@/components/items/heading/heading";
 import Project from "@/components/items/projects/project";
 import Skills from "@/components/items/skills/skills";
+import Head from "next/head";
 
 
  export  const metadata = {
@@ -25,11 +26,10 @@ export default function Home() {
   
   return (
   <div >
-  <SeoComp
-  title={"Home | Aryan Pamwani"}
+ <Head>
 
-  
-  />
+ 
+ </Head>
  
 <HeroSection/>
 

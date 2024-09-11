@@ -11,6 +11,7 @@ import  {store}  from '../Features/store';
 import {Provider} from 'react-redux';
 import ThemeChooser from "@/components/items/theme/theme";
 import ThemeMaker from "@/components/items/theme/ThemeMaker";
+import Head from "next/head";
 
 
 
@@ -33,6 +34,7 @@ export default function RootLayout({ children }) {
       <Provider store={store}>
     <html lang="en">
       <body className="">
+    
 <ThemeMaker>
 
 
