@@ -9,9 +9,9 @@ const HeroText = ({animation}) => {
   const lightTheme=useSelector((state)=>state.themeKey);
   return (
     <main data-aos={animation} className="flex flex-col content-center md:items-center sm:items-center lg:m-auto lg:w-3/4 lg:justify-start lg:items-start  lg:ml-36 md:content-center md:justify-center md:ml-0 sm:ml-0 md:w-full w-full sm:w-full mt-5 mb-14">
-    <div className='lg:text-2xl font-bold roboto lg:w-3/4 lg:justify-start lg:m-0 lg:items-start md:text-2xl md:content-center  md:ml-0 sm:ml-0 md:w-full w-full ml-0 flex flex-col m-auto justify-center items-center'> 
-    <span className='flex'>Meet  <p className='text-red-500 ml-2 mr-1 '>Aryan</p>! </span>
-    <div className='flex flex-col '> <div className='flex flex-row '> He is a <div className="ml-2 text-blue-600 ">
+    <div className='lg:text-2xl font-bold  lg:w-3/4 lg:justify-start lg:m-0 lg:items-start md:text-2xl md:content-center  md:ml-0 sm:ml-0 md:w-full w-full ml-0 flex flex-col m-auto justify-center items-center'> 
+    <span className='flex inter'>Meet  <p className='text-red-500 ml-2 mr-1 inter '>Aryan</p>! </span>
+    <div className='flex flex-col '> <div className='flex flex-row roboto'> He is a <div className="ml-2 text-blue-600 inter">
       <Typewriter
             options={{
               strings: ['Full Stack Developer', 'UI/UX Designer'],
@@ -20,7 +20,7 @@ const HeroText = ({animation}) => {
             }}
         /></div></div></div>
         <div className='leading-10 mt-4'>
-            <Link href={"/contact"}><Button variant={lightTheme?'default':'dark'}>Hire Me</Button></Link>
+            <Link href={"/contact"}><Button variant={lightTheme?'default':'dark'} className="inter">Hire Me</Button></Link>
         </div>
      </div>
 </main>

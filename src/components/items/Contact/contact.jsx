@@ -36,15 +36,16 @@ const handleForm=async(e)=>{
   return (
     <>
    
-    <form  className='flex flex-col justify-center m-auto items-center border border-slate-400 w-4/5 rounded-lg shadow-md shadow-slate-500 ' data-aos={animation}>
-        <p className="font-semibold inter my-5">Name</p>
+    <form  className='flex flex-col justify-center m-auto items-center border-[2px]  w-4/5 rounded-lg  ' data-aos={animation}>
+        <p className="font-semibold inter my-5  capitalize">Name</p>
         <input 
         type="text"   
         className={lightTheme?"input-fields":"input-fields-dark"} name="name" placeholder='Enter Your Name' 
           value={user.name}
           onChange={handleChange}
+          autoComplete='off'
           />
-        <p className="font-semibold inter my-5">Email</p>
+        <p className="font-semibold inter my-5  capitalize">Email</p>
         <input type="email"
           className={lightTheme?"input-fields":"input-fields-dark"}
             name="email"
@@ -55,7 +56,7 @@ const handleForm=async(e)=>{
            required
              />
 
-        <p className="font-semibold inter my-5">Subject</p>
+        <p className="font-semibold inter my-5 inter capitalize">Subject</p>
         <input type="text"
           className={lightTheme?"input-fields":"input-fields-dark"}
             name="subject" 

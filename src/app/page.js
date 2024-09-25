@@ -8,7 +8,7 @@ import Contact from "@/components/items/Contact/contact";
 import HeadingComp from "@/components/items/Heading/heading";
 import Project from "@/components/items/projects/project";
 import Skills from "@/components/items/Skills/skills";
-import Head from "next/head";
+
 
 
  export  const metadata = {
@@ -26,10 +26,7 @@ export default function Home() {
   
   return (
   <div >
- <Head>
 
- 
- </Head>
  
 <HeroSection/>
 

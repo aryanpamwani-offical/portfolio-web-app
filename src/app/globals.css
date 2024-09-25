@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap');
+@tailwind components;
+@tailwind utilities;
+
   @layer base {
     :root {
       --background: 0 0% 100%;
@@ -76,17 +81,21 @@
   }
 
 .roboto{
-  font-family: 'Roboto';
+  font-family: "Roboto", sans-serif;
 }
+
 .inter{
   font-family: 'Inter';
 }
+
 .opens-sans{
   font-family: "Open Sans";
 }
+
 .space-grotesk{
   font-family: "Space Grotesk";
 }
+
 .column-reverse {
   flex-direction: column-reverse;
   margin: auto;
@@ -106,21 +115,21 @@ filter: grayscale(1) invert(1);
 .input-fields{
   @apply rounded-lg border-slate-950 border
   w-4/5 outline-none px-5 text-center  capitalize
-  mb-5
+  mb-5 space-grotesk
 }
 .input-textarea{
   @apply rounded-lg border-slate-950 
   w-4/5 h-40 border outline-none px-5 py-4 mb-8
-   text-center capitalize
+   text-center capitalize space-grotesk
 }
 .input-textarea-dark{
   @apply rounded-lg border-white  bg-transparent
   w-4/5 h-40 border outline-none px-5 py-4 mb-8
-   text-center capitalize
+   text-center capitalize space-grotesk
 }
 
 .input-fields-dark{
-  @apply rounded-lg border-white border bg-transparent w-4/5 outline-none px-5 text-center  capitalize
+  @apply rounded-lg border-white border bg-transparent w-4/5 outline-none px-5 text-center  capitalize space-grotesk
 }
 .arrow-btn{
   @apply bg-slate-500 hover:bg-slate-800

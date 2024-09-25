@@ -1,48 +1,42 @@
 'use client'
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
-
 import Link from 'next/link'
 import { navItems } from './NavData'
 import Image from 'next/image'
 import { useSelector } from 'react-redux'
 
-
 const NavResp = () => {
-  const [status,setStatus]=useState(false);
-  const lightTheme=useSelector((state)=>state.themeKey);
+  const [status, setStatus] = useState(false);
+  const lightTheme = useSelector((state) => state.themeKey);
+
   return (
-  <>
-  <div className={status?"duration-1000 transition nav-animate-open ease-in-out lg:hidden md:flex sm:flex flex flex-row flex-wrap bg-inherit w-full h-screen shadow-md shadow-zinc-400 fixed  z-50":"transition ease-in-out duration-1000 lg:hidden md:flex sm:flex flex flex-row flex-wrap bg-inherit w-full h-24 shadow-md shadow-gray-400 fixed  z-50 nav-animate-open"}>
-    <div className="flex  justify-start w-1/3 m-auto h-15 p-5 content-start h-24">
-        <Image src="https://res.cloudinary.com/dttek3gqg/image/upload/v1724921045/navlogo_a1hivv.webp"  width={80} height={80} className='w-20   pl-6 ml-10' alt='logo' priority={true}/> 
-    </div>
-    <div className="flex  justify-end w-2/3   p-5 content-end" onClick={()=>setStatus(!status)}>
+    <>
+      <div className={`transition-all duration-1000 ease-in-out fixed w-full border-b z-50 ${status ? 'h-screen lg:hidden md:flex sm:flex flex flex-row flex-wrap bg-inherit' : 'h-24 lg:hidden md:flex sm:flex flex flex-row flex-wrap bg-inherit'}`}>
+        <div className="flex justify-start w-1/3 m-auto p-5 h-24">
+          <Image src="https://res.cloudinary.com/dttek3gqg/image/upload/v1724921045/navlogo_a1hivv.webp" width={80} height={80} className='w-20 pl-6 ml-10' alt='logo' priority={true} />
+        </div>
+        <div className="flex justify-end w-2/3 p-5" onClick={() => setStatus(!status)}>
+          <Image src={"https://res.cloudinary.com/dttek3gqg/image/upload/v1724922497/menu_crwwxl.png"} width={56} height={56} className={`${lightTheme ? 'w-14' : 'w-14 icon-dark'} my-auto pl-6 ml-5`} priority={true} alt='menu' />
+        </div>
 
-        <Image src={"https://res.cloudinary.com/dttek3gqg/image/upload/v1724922497/menu_crwwxl.png"} width={56} height={56} className={lightTheme?'w-14   my-auto pl-6 ml-5':'w-14   my-auto pl-6 ml-5 icon-dark'} priority={true} alt='menu'/> 
-    </div>
-    
-    
-        <ul className={status?"flex flex-col space-grotesk duration-1000 transition nav-animate-open ease-in-out delay-1000 content-center items-center   justify-center m-auto w-full":"hidden nav-animate-ul ease-in-out delay-1000"}>
-        { navItems?.slice(0,4).map((items,key)=>{
-        
-        return  <Link href={items.location} key={key} onClick={()=>setStatus(!status)} className='duration-1000 transition nav-animate-open ease-in-out'> <li className="flex flex-col duration-1000 transition nav-animate-open ease-in-out content-center m-auto my-5 hover:font-bold font-medium">
-            {items.name}
-          </li></Link>
-           })}
-        {navItems?.slice(4,5).map((items,key)=>{
-
-return   <Link href={items.location} key={key} className="flex flex-col content-center m-auto my-5" onClick={()=>setStatus(!status)}>
-<Button variant={lightTheme?'default':'dark'} >{items.name}</Button>
-</Link>
-         })}
+        <ul className={`flex flex-col space-grotesk transition-all ease-in-out ${status ? 'opacity-100 translate-y-0 duration-1000' : 'opacity-0 -translate-y-10 duration-500'} content-center items-center justify-center m-auto w-full`}>
+          {navItems?.slice(0, 4).map((items, key) => (
+            <li className="flex flex-col duration-1000 transition nav-animate-open ease-in-out content-center m-auto my-5 hover:font-bold font-medium" key={key}>
+              <Link href={items.location} onClick={() => setStatus(false)} className='duration-1000 transition nav-animate-open ease-in-out opens-sans rounded-md hover:bg-blue-500 hover:text-white active:bg-blue-500 active:text-white focus:bg-blue-700 focus:text-white'>
+                {items.name}
+              </Link>
+            </li>
+          ))}
+          {navItems?.slice(4, 5).map((items, key) => (
+            <Link href={items.location} key={key} className="flex flex-col content-center m-auto my-5" onClick={() => setStatus(false)}>
+              <Button variant={lightTheme ? 'default' : 'dark'} className="inter">{items.name}</Button>
+            </Link>
+          ))}
         </ul>
-    </div>
-    
- 
-  </>
-  )
+      </div>
+    </>
+  );
 }
 
-export default NavResp
-
+export default NavResp;

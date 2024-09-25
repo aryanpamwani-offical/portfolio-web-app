@@ -10,7 +10,7 @@ const SkillItem = ({lanuageName,imgUrl,cssAdd}) => {
       <div className="flex flex-col  ">
             
                 <Image src={imgUrl} width={80} height={80} className={lightTheme?`m-auto `:`m-auto ${cssAdd}`} alt='skills'/>
-                <p className='text-center mt-2 font-bold inter lg:text-2xl md:text-2xl sm:text-xl text-xs my-6 font-serif uppercase'>{lanuageName}</p>
+                <p className='text-center mt-2 font-bold inter lg:text-2xl md:text-2xl sm:text-xl text-xs my-6 space-grotesk uppercase'>{lanuageName}</p>
             </div>
     </>
   )

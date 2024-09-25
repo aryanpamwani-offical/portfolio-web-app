@@ -1,4 +1,4 @@
-import SeoComp from '@/components/items/SeoComponent/SeoComp'
+
 import HeadingComp from '@/components/items/Heading/heading'
 import Project from '@/components/items/projects/project'
 import React from 'react'
@@ -11,11 +11,7 @@ export  const metadata = {
 const page = () => {
   return (
     <>
-     <SeoComp
-  title={"Home | Projects"}
-
   
-  />
     <HeadingComp
  heading={"Projects"}
  subheading={"My Projects"}

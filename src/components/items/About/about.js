@@ -18,19 +18,19 @@ const AboutComp = ({animationRight,animationLeft}) => {
 
 <div className="flex flex-col content-center m-auto lg:w-1/2 md:w-full lg:justify-end w-full p-5 pr-6 mr-20 lg:text-xl md:text-xl sm:text-2xl texl-xl"  data-aos={animationLeft}>
    
-   <p className='text-base'>
+   <p className='text-base open-sans'>
 
    👋 Hi, I’m Aryan Pamwani, a 21-year-old B.Pharm student at RGPV (Rajiv Gandhi Proudyogiki Vishwavidyalaya). Passionate about UI/UX design, I love exploring creative solutions using tools like Figma. When I’m not studying, I’m immersed in the world of design, learning about user experience and creating intuitive interfaces.
 
    </p>
-   <h3 className='text-3xl font-bold mt-4 mb-4'>Professional Skills:
+   <h3 className='text-3xl font-bold mt-4 mb-4 roboto'>Professional Skills:
 
 </h3>
-<p className='text-base'>MERN Stack Developer: Proficient in building web applications using the MERN (MongoDB, Express.js, React, Node.js) stack. I enjoy working on both front-end and back-end development, bringing ideas to life through code.
+<p className='text-base open-sans'>MERN Stack Developer: Proficient in building web applications using the MERN (MongoDB, Express.js, React, Node.js) stack. I enjoy working on both front-end and back-end development, bringing ideas to life through code.
 Let’s connect and collaborate on exciting projects! 🤝🎨🚀</p>
 <div className='mt-2 mb-5 lg:m-0 lg:mt-4 md:mt-4 m-auto w-full lg:w-44'>
 
-<Link href={"/about"}><Button size="lg" className=" md:w-full sm:w-full w-full" variant={lightTheme?'default':'dark'}>Read More</Button></Link>
+<Link href={"/about"}><Button size="lg" className="md:w-full sm:w-full w-full inter" variant={lightTheme?'default':'dark'}>Read More</Button></Link>
 </div>
 </div>
 
