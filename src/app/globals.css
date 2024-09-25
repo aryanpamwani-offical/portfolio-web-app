@@ -114,22 +114,22 @@ filter: grayscale(1) invert(1);
 }
 .input-fields{
   @apply rounded-lg border-slate-950 border
-  w-4/5 outline-none px-5 text-center  capitalize
+  w-4/5 outline-none px-5 text-center  
   mb-5 space-grotesk
 }
 .input-textarea{
   @apply rounded-lg border-slate-950 
   w-4/5 h-40 border outline-none px-5 py-4 mb-8
-   text-center capitalize space-grotesk
+   text-center  space-grotesk
 }
 .input-textarea-dark{
   @apply rounded-lg border-white  bg-transparent
   w-4/5 h-40 border outline-none px-5 py-4 mb-8
-   text-center capitalize space-grotesk
+   text-center  space-grotesk
 }
 
 .input-fields-dark{
-  @apply rounded-lg border-white border bg-transparent w-4/5 outline-none px-5 text-center  capitalize space-grotesk
+  @apply rounded-lg border-white border bg-transparent w-4/5 outline-none px-5 text-center   space-grotesk
 }
 .arrow-btn{
   @apply bg-slate-500 hover:bg-slate-800
