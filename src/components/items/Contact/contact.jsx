@@ -19,6 +19,7 @@ const Contact = ({animation}) => {
 e.preventDefault();
 setUser({...user,[e.target.name]:e.target.value})
   };
+  
 const handleForm=async(e)=>{
   e.preventDefault();
          await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/api/contact/`,user).then(async(res)=>{
