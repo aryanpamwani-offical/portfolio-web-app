@@ -21,7 +21,7 @@ setUser({...user,[e.target.name]:e.target.value})
   };
 const handleForm=async(e)=>{
   e.preventDefault();
- await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/api/v1/contact/`,user).then(async(res)=>{
+         await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/api/contact/`,user).then(async(res)=>{
     toast.success(
     "Contact Form Saved Successfully"
   )
