@@ -9,8 +9,8 @@ const Footer = () => {
   const lightTheme=useSelector((state)=>state.themeKey);
   return (
     <div
-    className={lightTheme?'flex flex-col justify-center m-auto bg-inherit border border-t-2 text-inherit items-center  mt-20  w-full'
-    :"flex flex-col justify-center m-auto bg-black  text-inherit items-center border border-t-2 mt-20  w-full"}>
+    className={lightTheme?'flex flex-col justify-center m-auto bg-inherit  text-inherit items-center  border-t mt-20  w-full'
+    :"flex flex-col justify-center m-auto bg-black  text-inherit items-center border-t  mt-20  w-full"}>
         <Image src={'https://res.cloudinary.com/dttek3gqg/image/upload/v1724921045/navlogo_a1hivv.webp'} width={220} height={220} alt='logo'  priority={true}/>
         <div className="flex flex-row jusify-between  my-5 ">
             <Link href={"https://github.com/aryanpamwani-offical"}>

@@ -14,7 +14,7 @@ const NavResp = () => {
     <>
       <div className={`transition-all duration-1000 ease-in-out fixed w-full border-b z-50 ${status ? 'h-screen lg:hidden md:flex sm:flex flex flex-row flex-wrap bg-inherit' : 'h-24 lg:hidden md:flex sm:flex flex flex-row flex-wrap bg-inherit'}`}>
         <div className="flex justify-start w-1/3 m-auto p-5 h-24">
-          <Image src="https://res.cloudinary.com/dttek3gqg/image/upload/v1724921045/navlogo_a1hivv.webp" width={80} height={80} className='w-20 pl-6 ml-10' alt='logo' priority={true} />
+        <Link href={"/"}><Image src="https://res.cloudinary.com/dttek3gqg/image/upload/v1724921045/navlogo_a1hivv.webp" width={80} height={80} className='w-20 pl-6 ml-10' alt='logo' priority={true} /></Link>
         </div>
         <div className="flex justify-end w-2/3 p-5" onClick={() => setStatus(!status)}>
           <Image src={"https://res.cloudinary.com/dttek3gqg/image/upload/v1724922497/menu_crwwxl.png"} width={56} height={56} className={`${lightTheme ? 'w-14' : 'w-14 icon-dark'} my-auto pl-6 ml-5`} priority={true} alt='menu' />

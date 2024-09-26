@@ -23,12 +23,12 @@ const AboutComp = ({animationRight,animationLeft}) => {
    👋 Hi, I’m Aryan Pamwani, a 21-year-old B.Pharm student at RGPV (Rajiv Gandhi Proudyogiki Vishwavidyalaya). Passionate about UI/UX design, I love exploring creative solutions using tools like Figma. When I’m not studying, I’m immersed in the world of design, learning about user experience and creating intuitive interfaces.
 
    </p>
-   <h3 className='text-3xl font-bold mt-4 mb-4 roboto'>Professional Skills:
+   <h3 className='text-3xl font-bold lg:mt-8 mt-4 mb-6 roboto'>Professional Skills:
 
 </h3>
 <p className='text-base open-sans'>MERN Stack Developer: Proficient in building web applications using the MERN (MongoDB, Express.js, React, Node.js) stack. I enjoy working on both front-end and back-end development, bringing ideas to life through code.
 Let’s connect and collaborate on exciting projects! 🤝🎨🚀</p>
-<div className='mt-2 mb-5 lg:m-0 lg:mt-4 md:mt-4 m-auto w-full lg:w-44'>
+<div className='mt-2 mb-5 lg:m-0 lg:mt-8 md:mt-4 m-auto w-full lg:w-44'>
 
 <Link href={"/about"}><Button size="lg" className="md:w-full sm:w-full w-full inter" variant={lightTheme?'default':'dark'}>Read More</Button></Link>
 </div>

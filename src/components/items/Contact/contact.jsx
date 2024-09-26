@@ -37,7 +37,7 @@ const handleForm=async(e)=>{
   return (
     <>
    
-    <form  className='flex flex-col justify-center m-auto items-center border-[2px]  w-4/5 rounded-lg  ' data-aos={animation}>
+    <form  className='flex flex-col justify-center m-auto items-center border-[1px]  w-4/5 rounded-lg  ' data-aos={animation}>
         <p className="font-semibold inter my-5  capitalize">Name</p>
         <input 
         type="text"   
