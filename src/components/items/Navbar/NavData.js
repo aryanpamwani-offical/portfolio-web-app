@@ -15,6 +15,10 @@ export const navItems=[
         name:"Project",
         location:"/projects"
       } ,
+      {
+        name:"Blog",
+        location:"https://blog.aryanpamwani.me"
+      } ,
     {
       name:"Get in Touch",
       location:"/contact"

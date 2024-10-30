@@ -23,7 +23,7 @@ const Project = () => {
         setCurrent(current === 0 ? projectData.length - 1 : current - 1);
     }
   return (
-    <div className="flex justify-evenly p-5 items-center h-screen">
+    <div className="flex justify-evenly p-5 items-center ">
       <div className={lightTheme?"left-arrow bg-gray-200 hover:bg-gray-400 hover:text-white p-2 rounded-lg cursor-pointer lg:flex md:flex sm:flex hidden":"left-arrow bg-slate-800 hover:bg-slate-600  hover:text-white p-2 rounded-lg cursor-pointer lg:flex md:flex sm:flex hidden"} onClick={prevSlide}>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />

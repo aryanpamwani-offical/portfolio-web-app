@@ -28,7 +28,7 @@ const AboutComp = ({animationRight,animationLeft}) => {
 </h3>
 <p className='text-base open-sans'>MERN Stack Developer: Proficient in building web applications using the MERN (MongoDB, Express.js, React, Node.js) stack. I enjoy working on both front-end and back-end development, bringing ideas to life through code.
 Let’s connect and collaborate on exciting projects! 🤝🎨🚀</p>
-<div className='mt-2 mb-5 lg:m-0 lg:mt-8 md:mt-4 m-auto w-full lg:w-44'>
+<div className='mt-4 mb-5 lg:m-0 lg:mt-8 md:mt-4 m-auto w-full lg:w-44'>
 
 <Link href={"/about"}><Button size="lg" className="md:w-full sm:w-full w-full inter" variant={lightTheme?'default':'dark'}>Read More</Button></Link>
 </div>
