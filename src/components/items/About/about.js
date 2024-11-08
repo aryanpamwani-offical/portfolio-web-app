@@ -34,6 +34,7 @@ Let’s connect and collaborate on exciting projects! 🤝🎨🚀</p>
 </div>
 </div>
 
+
 </section>
   )
 }
