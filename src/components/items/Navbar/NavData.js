@@ -17,7 +17,7 @@ export const navItems=[
       } ,
       {
         name:"Blog",
-        location:"https://blog.aryanpamwani.me"
+        location:"https://blog.aryanpamwani.in"
       } ,
     {
       name:"Get in Touch",

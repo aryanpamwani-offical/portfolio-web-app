@@ -8,7 +8,7 @@ export default function robots()  {
       allow: '/',
       disallow: '/studio',
     },
-    sitemap: 'https://aryanpamwani.me/sitemap.xml',
+    sitemap: 'https://aryanpamwani.ine/sitemap.xml',
   }
 }
 
