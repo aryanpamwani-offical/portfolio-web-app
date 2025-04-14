@@ -17,7 +17,7 @@ const NavPc = () => {
   <>
  <nav className={lightTheme?"navbar nav-light transition-theme":"navbar nav-dark transition-theme"}>
     <div className="flex content-center justify-start w-1/3 p-5 ">
-        <Link href={"/"}><Image src="https://res.cloudinary.com/dttek3gqg/image/upload/v1724921045/navlogo_a1hivv.webp" width={90} height={90}className='  pl-6 ml-10' alt='logo' priority={true}/> </Link>
+        <Link href={"/"}><Image src="/logo.jpg" width={90} height={90}className=' rounded-full  ml-10' alt='logo' priority={true}/> </Link>
     </div>
     <div className="flex lg:flex md:flex sm:flex  content-center justify-end w-2/3 my-auto " >
         <ul className="flex flex-row space-grotesk content-center mr-5 pr-14">

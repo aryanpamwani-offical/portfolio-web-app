@@ -12,7 +12,7 @@ const AboutComp = ({animationRight,animationLeft}) => {
 <main className="flex content-center items-center justify-center lg:w-1/2 md:w-full   " data-aos={animationRight}>
     <div className='lg:pl-6 lg:ml-30 w-3/4 justify-center m-auto items-center'>
 
-    <Image src={'https://res.cloudinary.com/dttek3gqg/image/upload/v1724922530/main_g1raql.jpg'} width={400} height={700} loading='lazy' className='rounded-3xl m-auto ' alt='about'/>
+    <Image src={'/logo.jpg'} width={400} height={700} loading='lazy' className='rounded-3xl m-auto ' alt='about'/>
     </div>
 </main>
 

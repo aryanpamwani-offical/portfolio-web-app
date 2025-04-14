@@ -12,7 +12,7 @@ const ProjectItems = ({WebName,WebImgUrl,WebGit,WebUrl}) => {
   return (
     <>
     
-    <div className="flex lg:w-4/5 w-full border-[1px]  h-5/6 rounded-2xl mb-5 mx-4">
+    <div className="flex lg:w-4/5 w-full   h-5/6 rounded-2xl mb-5 mx-4">
       <div className='flex  justify-center content-center m-auto  w-full mb-10  '>
         <div className="flex flex-col aspect-video  p-6 w-full items-center text-center">
           <Image src={WebImgUrl} width={500} height={500} className='lg:w-4/5 w-full lg:h-4/5 md:h-4/5 sm:4/5 h-full  rounded-3xl mt-7' alt="projects" ></Image>
