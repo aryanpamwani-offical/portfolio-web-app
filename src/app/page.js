@@ -23,7 +23,11 @@ import Skills from "@/components/items/Skills/skills";
 
 export default function Home() {
 
-  
+  /**
+   * This is contact form component made in nextjs.Your task to replace it to the shadcn form in which these thing must follow:
+   * 1. Input box must have border-[color:var(--grey-004)] & LightTheme: text-[--grey-002] dark:text-[--grey-006]
+   * 2. Label must of LightTheme: text-[--grey-001] dark:text-[--grey-007]
+   */
   return (
   <div >
 

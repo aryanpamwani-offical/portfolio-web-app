@@ -1,87 +1,138 @@
 "use client"
-import { Button } from '@/components/ui/button'
+
 import axios from 'axios';
 import React,{useState} from 'react'
 import { useSelector } from 'react-redux';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { z } from "zod"
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Button } from "@/components/ui/button"
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form"
+import { Input } from "@/components/ui/input"
+import { useForm } from "react-hook-form";
+import { Textarea } from '@/components/ui/textarea';
 
 const Contact = ({animation}) => {
   const lightTheme=useSelector((state)=>state.themeKey);
-  const [user, setUser] = useState({
-    name:"",
-    email:"",
-    subject:"",
-    detail:""
+
+  const formSchema = z.object({
+    name: z.string().min(2, {
+      message: "Name must be at least 2 characters.",
+    }),
+    email: z.string().email({
+      message: "Please enter a valid email address.",
+    }),
+    subject: z.string().min(2, {
+      message: "Subject must be at least 2 characters.",
+    }),
+    detail: z.string().min(10, {
+      message: "Detail must be at least 10 characters.",
+    }),
   });
 
-  const handleChange=(e)=>{
-e.preventDefault();
-setUser({...user,[e.target.name]:e.target.value})
-  };
+  const form = useForm({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "", email: "", subject: "", detail: ""
+    },
+  });
+
+  function onSubmit(values) {
+    try {
+  axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/api/contact/create`, values)
+      .then((res) => {
+        toast.success("Contact Form Saved Successfully");
+        form.reset(); // Reset form after successful submission
+      })
+      .catch((error) => {
+        toast.error("Internal Error Occurred");
+        console.error(error);
+      });
   
-const handleForm=async(e)=>{
-  e.preventDefault();
-         await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/api/contact/`,user).then(async(res)=>{
-    toast.success(
-    "Contact Form Saved Successfully"
-  )
-//  console.log(res)
- }).catch(()=>{
-  toast(
-    "Internal Error Occured"
-  )
-//  console.log(error)
- })
+} catch (error) {
+  console.error("Form submission error:", error);
 }
+
+    // axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/api/contact/`, values)
+    //   .then((res) => {
+    //     toast.success("Contact Form Saved Successfully");
+    //     form.reset(); // Reset form after successful submission
+    //   })
+    //   .catch((error) => {
+    //     toast.error("Internal Error Occurred");
+    //     console.error(error);
+    //   });
+  }
+
   return (
     <>
-   
-    <form  className='flex flex-col justify-center m-auto items-center   w-4/5 rounded-lg  ' data-aos={animation}>
-        <p className="font-semibold inter my-5  capitalize">Name</p>
-        <input 
-        type="text"   
-        className={lightTheme?"input-fields":"input-fields-dark"} name="name" placeholder='Enter Your Name' 
-          value={user.name}
-          onChange={handleChange}
-          autoComplete='off'
+      <Form {...form} className="flex flex-col w-full items-center justify-center">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="flex  flex-col w-4/5 m-auto gap-4 " data-aos={animation}>
+          <FormField
+            control={form.control}
+            name="name"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Name</FormLabel>
+                <FormControl>
+                  <Input placeholder="Enter Your Name" className="bg-transparent" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
           />
-        <p className="font-semibold inter my-5  capitalize">Email</p>
-        <input type="email"
-          className={lightTheme?"input-fields":"input-fields-dark"}
+          <FormField
+            control={form.control}
             name="email"
-             placeholder='Enter Your Email'
-             value={user.email}
-             onChange={handleChange}
-             autoComplete='off'
-           required
-             />
-
-        <p className="font-semibold inter my-5 inter capitalize">Subject</p>
-        <input type="text"
-          className={lightTheme?"input-fields":"input-fields-dark"}
-            name="subject" 
-            placeholder='Enter Your Subject' 
-            value={user.subject}
-            onChange={handleChange}
-            autoComplete='off'
-           required
-           />
-
-        <p className="font-semibold inter my-5 capitalize">How may I help you? </p>
-        <textarea className={lightTheme?"input-textarea":"input-textarea-dark"} name="detail"
-           placeholder='Exter your project in detail'
-           value={user.detail}
-           onChange={handleChange}
-           autoComplete='off'
-           required
-           ></textarea>
-       
-        <Button size="lg" onClick={handleForm}className="w-4/5 mb-8" variant={lightTheme?'default':'dark'}>Submit</Button>
-        
-    </form>
-    <ToastContainer />
-    
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Email</FormLabel>
+                <FormControl>
+                  <Input placeholder="Enter Your E-mail" className="bg-transparent" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="subject"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Subject</FormLabel>
+                <FormControl>
+                  <Input placeholder="Enter Your Subject" className="bg-transparent" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="detail"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Detail</FormLabel>
+                <FormControl>
+                  <Textarea placeholder="Enter your project in detail" className="bg-transparent" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <Button type="submit" size="lg" className="w-full" variant={lightTheme ? 'default' : 'dark'}>Submit</Button>
+        </form>
+      </Form>
+      <ToastContainer />
     </>
   )
 }
