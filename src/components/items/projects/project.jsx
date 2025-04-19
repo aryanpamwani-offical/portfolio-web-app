@@ -1,58 +1,51 @@
 'use client'
 import React,{useState,useEffect} from 'react'
 import {  projectData} from "./projectData";
-import ProjectItems from './ProjectItems'
+
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import Image from 'next/image';
 import { useSelector } from 'react-redux';
-
+import Link from 'next/link';
 const Project = () => {
-  const [current, setCurrent] = useState(0);
- 
   const lightTheme=useSelector((state)=>state.themeKey);
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent(current === projectData.length - 1 ? 0 : current + 1);
-    }, 4000); 
-
-    return () => clearInterval(interval); 
-  }, [current])
-    function nextSlide() {
-        setCurrent(current === projectData.length - 1 ? 0 : current + 1);
-    }
-   
-    function prevSlide() {
-        setCurrent(current === 0 ? projectData.length - 1 : current - 1);
-    }
   return (
-    <div className="flex justify-evenly p-5 items-center ">
-      <div className={lightTheme?"left-arrow bg-gray-200 hover:bg-gray-400 hover:text-white p-2 rounded-lg cursor-pointer lg:flex md:flex sm:flex hidden":"left-arrow bg-slate-800 hover:bg-slate-600  hover:text-white p-2 rounded-lg cursor-pointer lg:flex md:flex sm:flex hidden"} onClick={prevSlide}>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-                    </svg>
-                </div>
-  <div className='flex  justify-center items-center m-auto  w-full mb-10  '>
-  {projectData.map(
-                    (data, index) =>
-                        current === index && (
-<ProjectItems
-key={data.id}
-WebName={data.name}
-WebImgUrl={data.imgurl}
-WebGit={data.gitUrl}
-WebUrl={data.linkUrl}
-/>
-                          
-                          
-                        )
-                )}
+    
+    <>
+   <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 justify-center items-center p-10 ">
+    {projectData.map((item) => (
+       <Card className={`max-w-fit  ${lightTheme?"bg-[--grey-007] ":"bg-[--grey-001]  "} `} key={item.id}>
+       <CardHeader >
+         
+         <CardTitle className={`${lightTheme?"text-[--grey-001]":"text-[--grey-007]"}`}>{item.name}</CardTitle>
+         <CardDescription className="">{item.description}</CardDescription>
+        <div className='flex flex-row gap-2 !mt-5'>
+        <Link href={item.linkUrl} target='_blank' passHref><Button variant={lightTheme?"default_borderless":"dark_borderless"}> <ExternalLink></ExternalLink></Button></Link>
+        <Link href={item.gitUrl} target='_blank' passHref><Button variant={lightTheme?"default_border":"dark_border"}><GitHubIcon></GitHubIcon></Button></Link>
+        </div>
+       </CardHeader>
+       <CardContent className="flex flex-col items-center">
+        <Image src={item.imgurl} alt={item.name} width={400} height={400} className="rounded-lg border border-[--grey-004] p-2 bg-white justify-center" />
+
+       </CardContent>
+       <CardFooter className="flex gap-2">
+       <Image src={"https://res.cloudinary.com/dttek3gqg/image/upload/v1724922736/next-js-seeklogo_trs43v.png"} width={30} height={30} alt='nextjs' className={`${lightTheme?"":"icon-dark"}`}/>
+       <Image src={"https://res.cloudinary.com/dttek3gqg/image/upload/v1724922781/reactjs-logo-icon_q06uez.png"} width={30} height={30} alt='express' className={`${lightTheme?"filter grayscale contrast-300 brightness-0":"filter grayscale contrast-200"}`}/> 
+       <Image src={"https://res.cloudinary.com/dttek3gqg/image/upload/v1724922771/tailwind-Logo_o27mh9.png"} width={30} height={30}  alt='tailwind' className={`${lightTheme?"filter grayscale contrast-300 brightness-0":"filter grayscale contrast-200"}`}/>
+       <Image src={"https://res.cloudinary.com/dttek3gqg/image/upload/v1724922844/express_q0zlod.png"} width={30} height={30} alt='express' className={`${lightTheme?"":"icon-dark"}`}/>
+       <Image src={"https://res.cloudinary.com/dttek3gqg/image/upload/v1724922881/mongodb_ahxx3e.png"} width={40} height={30} alt='mongodb' className={`${lightTheme?"filter grayscale contrast-300 brightness-0":"filter grayscale contrast-200"}`}/>
+
+       </CardFooter>
+     </Card>
+    ))}
 
 
+ 
 </div>
-<div className={lightTheme?"right-arrow bg-gray-200 hover:bg-gray-400 hover:text-white p-2 rounded-lg cursor-pointer lg:flex md:flex sm:flex hidden":"right-arrow bg-slate-800 hover:bg-slate-600 hover:text-white p-2 rounded-lg cursor-pointer lg:flex md:flex sm:flex hidden"} onClick={nextSlide}>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                    </svg>
-                </div>
-</div>
+
+    </>
    
   )
 }

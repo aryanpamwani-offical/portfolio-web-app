@@ -76,7 +76,7 @@ const Contact = ({animation}) => {
   return (
     <>
       <Form {...form} className="flex flex-col w-full items-center justify-center">
-        <form onSubmit={form.handleSubmit(onSubmit)} className="flex  flex-col w-4/5 m-auto gap-4 " data-aos={animation}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="flex  flex-col w-4/5 m-auto gap-4 ">
           <FormField
             control={form.control}
             name="name"
