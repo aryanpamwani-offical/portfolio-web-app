@@ -6,7 +6,7 @@ import skillData from './skillData'
 const Skills = ({animation}) => {
   return (
     
-    <section className='lg:mx-20 md:mx-15 sm:mx-0 lg:p-10 p-5' data-aos={animation}>
+    <section className='lg:mx-20 md:mx-15 sm:mx-0 ' data-aos={animation}>
     <div className='flex flex-col w-full  mb-5 mt-10 lg:p-12 md:p-6 sm:p-3 p-0 '>
        
         <div className="flex flex-row my-1  justify-between ">

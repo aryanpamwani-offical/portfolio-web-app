@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux'
 const AboutComp = ({animationRight,animationLeft}) => {
   const lightTheme=useSelector((state)=>state.themeKey);
   return (
-    <section className='flex lg:w-full lg:flex-row md:flex-col sm:flex-col flex-col  lg:content-center mb-12 lg:p-10 p-5 lg:gap-0 gap-5 lg:justify-between md:justify-center sm:justify-center items-center'>
+    <section className='flex lg:w-full lg:flex-row md:flex-col sm:flex-col flex-col  lg:content-center mb-12 '>
 <main className="flex content-center items-center justify-center lg:w-1/2 md:w-full   " data-aos={animationRight}>
     <div className='lg:pl-6 lg:ml-30 w-3/4 justify-center m-auto items-center'>
 
