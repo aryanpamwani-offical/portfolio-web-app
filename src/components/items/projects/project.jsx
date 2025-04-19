@@ -16,7 +16,7 @@ const Project = () => {
     <>
    <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 justify-center items-center lg:p-10 p-5 ">
     {projectData.map((item) => (
-       <Card className={`max-w-fit  ${lightTheme?"bg-[--grey-007] ":"bg-[--grey-001]  "} `} key={item.id}>
+       <Card className={`max-w-fit  ${lightTheme?"bg-[--grey-007] !border-[var(--grey-006)]":"bg-[--grey-001] !border-[var(--grey-004)] "} !border `} key={item.id}>
        <CardHeader >
          
          <CardTitle className={`${lightTheme?"text-[--grey-001]":"text-[--grey-007]"} font-open-sans`}>{item.name}</CardTitle>

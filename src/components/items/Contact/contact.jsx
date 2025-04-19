@@ -84,7 +84,7 @@ const Contact = ({animation}) => {
               <FormItem>
                 <FormLabel>Name</FormLabel>
                 <FormControl>
-                  <Input placeholder="Enter Your Name" className="bg-transparent" {...field} />
+                  <Input placeholder="Enter Your Name"  className={` bg-transparent ${lightTheme? "!border-[var(--grey-006)] focus:!border-[var(--grey-005)] outline-none ":" !border-[var(--grey-004)] focus:!border-[var(--grey-003)]  outline-none"} !border  `} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -97,7 +97,7 @@ const Contact = ({animation}) => {
               <FormItem>
                 <FormLabel>Email</FormLabel>
                 <FormControl>
-                  <Input placeholder="Enter Your E-mail" className="bg-transparent" {...field} />
+                  <Input placeholder="Enter Your E-mail" className={` bg-transparent ${lightTheme? "!border-[var(--grey-006)]":" !border-[var(--grey-004)] "} !border `} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -110,7 +110,7 @@ const Contact = ({animation}) => {
               <FormItem>
                 <FormLabel>Subject</FormLabel>
                 <FormControl>
-                  <Input placeholder="Enter Your Subject" className="bg-transparent" {...field} />
+                  <Input placeholder="Enter Your Subject" className={` bg-transparent ${lightTheme? "!border-[var(--grey-006)]":" !border-[var(--grey-004)] "} !border `} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -123,7 +123,7 @@ const Contact = ({animation}) => {
               <FormItem>
                 <FormLabel>Detail</FormLabel>
                 <FormControl>
-                  <Textarea placeholder="Enter your project in detail" className="bg-transparent" {...field} />
+                  <Textarea placeholder="Enter your project in detail" className={` bg-transparent ${lightTheme? "!border-[var(--grey-006)]":" !border-[var(--grey-004)] "} !border `} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
