@@ -16,7 +16,7 @@ const AboutComp = ({animationRight,animationLeft}) => {
     </div>
 </main>
 
-<div className="flex flex-col content-center m-auto lg:w-1/2 md:w-full lg:justify-end w-full p-5 pr-6 mr-20 lg:text-xl md:text-xl sm:text-2xl texl-xl"  data-aos={animationLeft}>
+<div className="flex flex-col content-center m-auto lg:w-1/2 md:w-full lg:justify-end w-full p-10 mr-20 lg:text-xl md:text-xl sm:text-2xl texl-xl"  data-aos={animationLeft}>
    
    <p className='text-base open-sans'>
 
