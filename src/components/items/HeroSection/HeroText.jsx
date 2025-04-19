@@ -14,7 +14,7 @@ const HeroText = ({animation}) => {
     <div className='flex flex-col '> <div className='flex flex-row font-open-sans'> & <div className="ml-2 text-blue-600 font-open-sans">
       <Typewriter
             options={{
-              strings: ['Full Stack Developer', 'UI/UX Designer'],
+              strings: [  'MERN Stack Developer', 'React Developer', 'Next.js Developer','Full Stack Developer'],
               autoStart: true,
               loop: true,
             }}
