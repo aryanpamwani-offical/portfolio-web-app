@@ -19,9 +19,9 @@ const Project = () => {
        <Card className={`max-w-fit  ${lightTheme?"bg-[--grey-007] ":"bg-[--grey-001]  "} `} key={item.id}>
        <CardHeader >
          
-         <CardTitle className={`${lightTheme?"text-[--grey-001]":"text-[--grey-007]"}`}>{item.name}</CardTitle>
-         <CardDescription className="">{item.description}</CardDescription>
-        <div className='flex flex-row gap-2 !mt-5'>
+         <CardTitle className={`${lightTheme?"text-[--grey-001]":"text-[--grey-007]"} font-open-sans`}>{item.name}</CardTitle>
+         <CardDescription className="font-inter">{item.description}</CardDescription>
+        <div className='flex flex-row gap-2 !mt-5 font-open-sans'>
         <Link href={item.linkUrl} target='_blank' passHref><Button variant={lightTheme?"default_borderless":"dark_borderless"}> <ExternalLink></ExternalLink></Button></Link>
         <Link href={item.gitUrl} target='_blank' passHref><Button variant={lightTheme?"default_border":"dark_border"}><GitHubIcon></GitHubIcon></Button></Link>
         </div>
