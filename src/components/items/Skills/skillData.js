@@ -36,7 +36,7 @@ const skillData = [
   },
   {
     id: 7,
-    imgUrl: "https://res.cloudinary.com/dttek3gqg/image/upload/v1724922822/OIP_wdyunl.jpg",
+    imgUrl: "https://res.cloudinary.com/dttek3gqg/image/upload/v1745156162/images_dcupdy.png",
     languageName: "Typescript"
   },
   {
