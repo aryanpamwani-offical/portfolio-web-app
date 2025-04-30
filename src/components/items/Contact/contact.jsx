@@ -20,6 +20,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { useForm } from "react-hook-form";
 import { Textarea } from '@/components/ui/textarea';
+import { Send } from 'lucide-react';
 
 const Contact = ({animation}) => {
   const lightTheme=useSelector((state)=>state.themeKey);
@@ -76,7 +77,7 @@ const Contact = ({animation}) => {
   return (
     <>
       <Form {...form} className="flex flex-col w-full items-center justify-center">
-        <form onSubmit={form.handleSubmit(onSubmit)} className="flex  flex-col w-4/5 m-auto gap-4 " data-aos={animation}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="flex  flex-col w-4/5 m-auto gap-8 " data-aos={animation}>
           <FormField
             control={form.control}
             name="name"
@@ -123,13 +124,13 @@ const Contact = ({animation}) => {
               <FormItem>
                 <FormLabel>Detail</FormLabel>
                 <FormControl>
-                  <Textarea placeholder="Enter your project in detail" className={` bg-transparent ${lightTheme? "!border-[var(--grey-006)]":" !border-[var(--grey-004)] "} !border `} {...field} />
+                  <Textarea placeholder="Explain the project in more detail" className={` bg-transparent ${lightTheme? "!border-[var(--grey-006)]":" !border-[var(--grey-004)] "} !border  `} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
-          <Button type="submit" size="lg" className="w-full" variant={lightTheme ? 'default' : 'dark'}>Submit</Button>
+          <Button type="submit" size="lg" className="w-full gap-2 content-center" variant={lightTheme ? 'default' : 'dark'}><span className="text-xl font-semibold">Send</span> <Send className='mt-1 w-5'></Send></Button>
         </form>
       </Form>
       <ToastContainer />
