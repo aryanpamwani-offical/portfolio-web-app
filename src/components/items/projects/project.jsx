@@ -26,7 +26,7 @@ const Project = () => {
         {projectData.map((item) => (
           <Card 
             key={item.id} 
-            className={`h-full flex flex-col ${lightTheme ? "bg-[--grey-007] !border-[var(--grey-006)]" : "bg-[--grey-001] !border-[var(--grey-004)]"} !border`}
+            className={`h-full flex flex-col ${lightTheme ? "bg-[--grey-007] !border-[var(--grey-006)]" : "bg-[--grey-002] !border-[var(--grey-002)]"} !border`}
           >
             <CardHeader className="flex-grow">
               <CardTitle className={`${lightTheme ? "text-[--grey-001]" : "text-[--grey-007]"} font-open-sans`}>
