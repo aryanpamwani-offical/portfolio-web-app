@@ -32,13 +32,9 @@ const Project = () => {
               <CardTitle className={`${lightTheme ? "text-[--grey-001]" : "text-[--grey-007]"} font-open-sans`}>
                 {item.name}
               </CardTitle>
-              <CardDescription className="font-inter min-h-[80px] group relative">
+              <CardDescription className={`${lightTheme ? "text-[--grey-001]" : "text-[--grey-007]"}  font-inter  group relative`}>
                 {truncateText(item.description)}
-                {item.description.split(' ').length > MAX_WORDS && (
-                  <div className="absolute left-0 top-0 w-full opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-gray-50 dark:bg-gray-800 p-2 rounded-md shadow-lg z-10 hidden sm:block">
-                    {item.description}
-                  </div>
-                )}
+                {item.description.split(' ').length > MAX_WORDS }
               </CardDescription>
               <div className='flex flex-row gap-2 !mt-5 font-open-sans'>
                 <Link href={item.linkUrl} target='_blank' passHref>
