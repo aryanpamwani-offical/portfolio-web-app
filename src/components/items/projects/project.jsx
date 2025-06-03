@@ -35,7 +35,7 @@ const Project = () => {
               <CardDescription className="font-inter min-h-[80px] group relative">
                 {truncateText(item.description)}
                 {item.description.split(' ').length > MAX_WORDS && (
-                  <div className="absolute left-0 top-0 w-full opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-gray-50 dark:bg-gray-800 p-2 rounded-md shadow-lg z-10">
+                  <div className="absolute left-0 top-0 w-full opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-gray-50 dark:bg-gray-800 p-2 rounded-md shadow-lg z-10 hidden sm:block">
                     {item.description}
                   </div>
                 )}
