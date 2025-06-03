@@ -35,7 +35,7 @@ const skillData = [
     languageName: "Tailwind css"
   },
   {
-    id: 7, imgUrl:"https://res.cloudinary.com/dttek3gqg/image/upload/v1745156648/1000164685-removebg-preview_zvfwe3.png",
+    id: 7, imgUrl:"https://res.cloudinary.com/dttek3gqg/image/upload/v1748955382/ts-logo-512_nza3fn.svg",
     languageName: "Typescript"
   },
   {
