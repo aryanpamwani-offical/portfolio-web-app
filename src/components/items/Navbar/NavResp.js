@@ -29,19 +29,23 @@ const NavResp = () => {
         </div>
         </div>
 
-        <ul className={`flex flex-col space-grotesk transition-all ease-in-out ${status ? 'opacity-100 translate-y-0 duration-1000' : 'opacity-0 -translate-y-10 duration-100'} content-center items-center justify-center m-auto w-full`}>
-          {navItems?.slice(items-6,items-1).map((items, key) => (
-            <li className="flex flex-col duration-1000 transition nav-animate-open ease-in-out content-center m-auto my-5 hover:font-bold font-medium" key={key}>
-              <Link href={items.location} onClick={() => setStatus(false)} className='duration-1000 transition nav-animate-open ease-in-out opens-sans rounded-md relative inter underline-effect'>
-                {items.name}
-              </Link>
-            </li>
-          ))}
-          {navItems?.slice(items-1,items).map((items, key) => (
-            <Link href={items.location} key={key} className="flex flex-col content-center m-auto my-5" onClick={() => setStatus(false)}>
-              <Button variant={lightTheme ? 'default' : 'dark'} className="inter">{items.name}</Button>
-            </Link>
-          ))}
+        <ul className={`flex flex-col space-grotesk transition-all ease-in-out ${status ? 'opacity-100 translate-y-0 duration-1000' : 'opacity-0 -translate-y-10 duration-100'} content-center items-center justify-center m-auto w-full pointer-events-none`}>
+          {status && (
+            <>
+              {navItems?.slice(items-6,items-1).map((items, key) => (
+                <li className="flex flex-col duration-1000 transition nav-animate-open ease-in-out content-center m-auto my-5 hover:font-bold font-medium pointer-events-auto" key={key}>
+                  <Link href={items.location} onClick={() => setStatus(false)} className='duration-1000 transition nav-animate-open ease-in-out opens-sans rounded-md relative inter underline-effect'>
+                    {items.name}
+                  </Link>
+                </li>
+              ))}
+              {navItems?.slice(items-1,items).map((items, key) => (
+                <Link href={items.location} key={key} className="flex flex-col content-center m-auto my-5 pointer-events-auto" onClick={() => setStatus(false)}>
+                  <Button variant={lightTheme ? 'default' : 'dark'} className="inter">{items.name}</Button>
+                </Link>
+              ))}
+            </>
+          )}
         </ul>
       </nav>
     </>
