@@ -1,6 +1,6 @@
 
 import AboutComp from '@/components/items/About/about'
-import HeadingComp from '@/components/items/Heading/heading'
+import HeadingComp from '@/components/items/HeroSection/Heading/heading'
 import React from 'react'
 export  const metadata = {
   title: "About | Aryan Pamwani",

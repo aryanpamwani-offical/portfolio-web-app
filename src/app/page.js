@@ -1,11 +1,12 @@
 // "use client";
 
 import HeroSection from "@/components/items/HeroSection/HeroSection";
+import AvailabilityLabel from "@/components/items/HeroSection/AvailabilityLabel";
 
 import AboutComp from "@/components/items/About/about";
 import Contact from "@/components/items/Contact/contact";
 
-import HeadingComp from "@/components/items/Heading/heading";
+import HeadingComp from "@/components/items/HeroSection/Heading/heading";
 import Project from "@/components/items/projects/project";
 import Skills from "@/components/items/Skills/skills";
 
@@ -31,7 +32,7 @@ export default function Home() {
   return (
   <div >
 
- 
+ <AvailabilityLabel />
 <HeroSection/>
 
 

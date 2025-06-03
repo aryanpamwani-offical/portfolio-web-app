@@ -1,5 +1,5 @@
 
-import HeadingComp from '@/components/items/Heading/heading'
+import HeadingComp from '@/components/items/HeroSection/Heading/heading'
 import Skills from '@/components/items/Skills/skills'
 import React from 'react'
 export  const metadata = {
