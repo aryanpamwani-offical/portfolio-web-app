@@ -3,8 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/items/Navbar/Nav";
 import Footer from "@/components/items/Footer/footer";
 import React,{useEffect} from 'react'
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { Toaster } from 'sonner';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import  {store}  from '../Features/store';
@@ -44,9 +43,7 @@ containerId={"GTM-K8R3BDDL"}
        
 
         {children}
-        <ToastContainer />
-
-        
+        <Toaster richColors closeButton position="top-right" />
         <ThemeChooser />
         <Footer/>
 

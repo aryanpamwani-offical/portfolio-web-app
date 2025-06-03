@@ -45,7 +45,7 @@ const skillData = [
   },
   {
     id: 9,
-    imgUrl: "https://res.cloudinary.com/dttek3gqg/image/upload/v1724922844/express_q0zlod.png",
+    imgUrl: "https://img.icons8.com/ios/50/express-js.png",
     languageName: "Express Js"
   },
   {

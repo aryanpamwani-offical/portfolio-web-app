@@ -6,6 +6,7 @@ import { navItems } from './NavData'
 import Image from 'next/image'
 import { useSelector } from 'react-redux'
 import { MdOutlineClose } from "react-icons/md";
+
 const NavResp = () => {
   const [status, setStatus] = useState(false);
   const lightTheme = useSelector((state) => state.themeKey);
@@ -16,9 +17,15 @@ const NavResp = () => {
         <div className="flex justify-start w-full p-5 h-28">
         <Link href={"/"}><Image src={'https://res.cloudinary.com/dttek3gqg/image/upload/v1744781034/logo_zk1qty.webp'} width={80} height={80} className='w-20 rounded-full ml-10' alt='logo' priority={true} /></Link>
         <div className="flex justify-end w-full p-5" onClick={() => setStatus(!status)}>
-{!status? 
-          <Image src={"https://res.cloudinary.com/dttek3gqg/image/upload/v1724922497/menu_crwwxl.png"} width={56} height={56} className={`${lightTheme ? 'w-14' : 'w-14 icon-dark'} my-auto pl-6 ml-5`} priority={true} alt='menu' />
-:<MdOutlineClose  className={`${lightTheme ? 'w-14 text-[var(--grey-001)]' : 'w-14 icon-dark'} my-auto pl-6 ml-5 text-4xl text-[var(--grey-001)]`} priority={true} alt='menu'/>}
+{!status? <div className='flex flex-col'>
+ <div className=' flex flex-col items-center gap-[10px] my-auto '>
+        <div className={`${lightTheme ? "bg-[var(--grey-001)]":"bg-[var(--grey-007)]"} w-8 h-[2px] rounded-md mb-2"`}></div>
+         <div className={`${lightTheme ? "bg-[var(--grey-001)]":"bg-[var(--grey-007)]"} w-8 h-[2px] rounded-md mb-1"`}></div>
+        </div> 
+       
+</div>
+        
+:<MdOutlineClose  className={`${lightTheme ? 'w-14 text-[var(--grey-001)]' : 'w-14 icon-dark'} my-auto pl-6 ml-5 text-4xl text-[var(--grey-001)]`}  alt='menu'/>}
         </div>
         </div>
 

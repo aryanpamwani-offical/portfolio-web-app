@@ -156,25 +156,3 @@ filter: grayscale(1) invert(1);
   @apply bg-slate-500 hover:bg-slate-800
 }
 
-
-.underline-effect::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -2px; /* Positioning the underline */
-  height: 2px; /* Height of the underline */
-  background: currentColor; /* Color of the underline */
-  transform: scaleX(0); /* Start with the underline hidden */
-  transition: transform 0.3s ease; /* Animation for the underline */
-}
-
-.underline-effect:hover::after,
-.underline-effect:focus::after,
-.underline-effect:active::after {
-  transform: scaleX(1); /* Show the underline */
-}
-.underline-effect:focus::after
- {
- font-weight:600; /* Show the underline */
-}
