@@ -37,7 +37,7 @@ const Contact = ({animation}) => {
     subject: z.string()
       .min(2, { message: "Subject must be at least 2 characters." })
       .max(100, { message: "Subject must not exceed 100 characters." }),
-    detail: z.string()
+    details: z.string()
       .min(10, { message: "Detail must be at least 10 characters." })
       .max(1000, { message: "Detail must not exceed 1000 characters." }),
   });
@@ -45,7 +45,7 @@ const Contact = ({animation}) => {
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: "", email: "", subject: "", detail: ""
+      name: "", email: "", subject: "", details: ""
     },
   });
 
@@ -129,7 +129,7 @@ const Contact = ({animation}) => {
           />
           <FormField
             control={form.control}
-            name="detail"
+            name="details"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Detail</FormLabel>
