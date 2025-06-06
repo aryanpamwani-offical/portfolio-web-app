@@ -1,6 +1,6 @@
 export const projectData = [
   {
-   
+    id:1,
     name: "Portfolio",
     description: "A personal portfolio website showcasing my skills, featured projects, and experience. Built to demonstrate my expertise in modern frontend development with seamless deployment and fast performance using Vercel.",
     imgurl: "https://res.cloudinary.com/dttek3gqg/image/upload/v1745069297/Screenshot_8_phsxyt.png",
