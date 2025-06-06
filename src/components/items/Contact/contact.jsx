@@ -52,7 +52,7 @@ const Contact = ({animation}) => {
   async function onSubmit(values) {
     setIsLoading(true);
     toast.promise(
-      axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/api/contact/create`, values), {
+      axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/contact/create`, values), {
         loading: 'Sending your message...',
         success: (res) => {
           form.reset();
