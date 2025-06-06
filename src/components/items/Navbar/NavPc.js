@@ -23,7 +23,7 @@ const NavPc = () => {
     <div className="flex lg:flex md:flex sm:flex  content-center justify-end w-2/3 my-auto " >
         <ul className="flex flex-row space-grotesk content-center mr-5 pr-14">
        
-       { navItems?.slice(items-6,items-1).map((items,key)=>{
+       { navItems?.slice(items-items.length,items-1).map((items,key)=>{
         
          return <li key={key} className=''>
           <Link href={items.location}  className='flex font-medium mt-2 mr-5 px-1.5 py-1 opens-sans  relative inter underline-effect'>

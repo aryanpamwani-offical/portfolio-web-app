@@ -32,7 +32,7 @@ const NavResp = () => {
         <ul className={`flex flex-col space-grotesk transition-all ease-in-out ${status ? 'opacity-100 translate-y-0 duration-1000' : 'opacity-0 -translate-y-10 duration-100'} content-center items-center justify-center m-auto w-full pointer-events-none`}>
           {status && (
             <>
-              {navItems?.slice(items-6,items-1).map((items, key) => (
+              {navItems?.slice(items-items.length,items-1).map((items, key) => (
                 <li className="flex flex-col duration-1000 transition nav-animate-open ease-in-out content-center m-auto my-5 hover:font-bold font-medium pointer-events-auto" key={key}>
                   <Link href={items.location} onClick={() => setStatus(false)} className='duration-1000 transition nav-animate-open ease-in-out opens-sans rounded-md relative inter underline-effect'>
                     {items.name}
