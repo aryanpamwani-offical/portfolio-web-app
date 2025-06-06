@@ -50,22 +50,23 @@ const Project = () => {
               </div>
             </CardHeader>
             
-            <CardContent className="flex flex-col items-center justify-center flex-grow p-4">
-              <div className="w-full aspect-[16/9] relative">
+            <CardContent className="flex flex-col items-center justify-center flex-grow p-0">
+              <div className="w-full h-[200px] relative overflow-hidden">
                 <Image 
                   src={item.imgurl} 
                   alt={item.name} 
                   fill
-                  className="rounded-lg border border-[--grey-004] p-2 bg-white object-contain" 
+                  className="object-contain rounded-lg h-auto !w-auto m-auto" 
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
             </CardContent>
             
-            <CardFooter className="flex gap-2 justify-center mt-auto">
+            <CardFooter className="flex gap-2 justify-center mt-4">
               <Image src={"https://res.cloudinary.com/dttek3gqg/image/upload/v1724922736/next-js-seeklogo_trs43v.png"} width={30} height={30} alt='nextjs' className={`${lightTheme ? "" : "icon-dark"}`}/>
               <Image src={"https://res.cloudinary.com/dttek3gqg/image/upload/v1724922781/reactjs-logo-icon_q06uez.png"} width={30} height={30} alt='express' className={`${lightTheme ? "filter grayscale contrast-300 brightness-0" : "filter grayscale contrast-200"}`}/> 
               <Image src={"https://res.cloudinary.com/dttek3gqg/image/upload/v1724922771/tailwind-Logo_o27mh9.png"} width={30} height={30} alt='tailwind' className={`${lightTheme ? "filter grayscale contrast-300 brightness-0" : "filter grayscale contrast-200"}`}/>
-              <Image src={"https://res.cloudinary.com/dttek3gqg/image/upload/v1724922844/express_q0zlod.png"} width={30} height={30} alt='express' className={`${lightTheme ? "" : "icon-dark"}`}/>
+              <Image src={"https://img.icons8.com/ios/50/express-js.png"} width={30} height={30} alt='express' className={`${lightTheme ? "" : "icon-dark"}`}/>
               <Image src={"https://res.cloudinary.com/dttek3gqg/image/upload/v1724922881/mongodb_ahxx3e.png"} width={40} height={30} alt='mongodb' className={`${lightTheme ? "filter grayscale contrast-300 brightness-0" : "filter grayscale contrast-200"}`}/>
             </CardFooter>
           </Card>
